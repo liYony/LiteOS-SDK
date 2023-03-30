@@ -64,3 +64,8 @@ gcc -o memcpy_s.o -c -Iinclude -fstack-protector-strong -fPIC -Wall -D_FORTIFY_S
 #### 源码来源
 
 https://gitee.com/LiteOS/LiteOS/commit/19a71b1b0a7bc4317ea991783f6659fa1a615837
+
+#### 版权协议
+
+木兰宽松许可证（第2版）
+
