@@ -1,0 +1,9 @@
+from building import *
+
+cwd = GetCurrentDir() + "/include"
+src = Glob('src/*.c')
+inc = [cwd]
+
+group = DefineGroup('hwsecurec', src, depend = ['PKG_LITEOS_SDK_HWSECUREC_EN'], CPPPATH = inc)
+
+Return('group')
