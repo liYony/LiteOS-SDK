@@ -27,5 +27,8 @@ int memcpy_s_demo()
             rt_kprintf("%d ", a1[i]);
     }
     rt_kprintf("\n");
+
+    return 0;
 }
+
 INIT_APP_EXPORT(memcpy_s_demo);

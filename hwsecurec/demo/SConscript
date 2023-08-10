@@ -1,0 +1,16 @@
+from building import *
+import os
+
+cwd = GetCurrentDir()
+src = ['memcpy_s_demo.c']
+inc = [cwd]
+
+if GetDepend(['PKG_LITEOS_SDK_USING_DEMO_MEMCPY_S']):
+    src += ['memcpy_s_demo.c']
+
+if GetDepend(['PKG_LITEOS_SDK_USING_DEMO_MEMSET_S']):
+    src += ['memset_s_demo.c']
+
+group = DefineGroup('hwsecurec_demo', src, depend = [''], CPPPATH = inc)
+
+Return('group')
