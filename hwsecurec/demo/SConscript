@@ -1,8 +1,7 @@
 from building import *
-import os
 
 cwd = GetCurrentDir()
-src = ['memcpy_s_demo.c']
+src = []
 inc = [cwd]
 
 if GetDepend(['PKG_LITEOS_SDK_USING_DEMO_MEMCPY_S']):
@@ -11,6 +10,6 @@ if GetDepend(['PKG_LITEOS_SDK_USING_DEMO_MEMCPY_S']):
 if GetDepend(['PKG_LITEOS_SDK_USING_DEMO_MEMSET_S']):
     src += ['memset_s_demo.c']
 
-group = DefineGroup('hwsecurec_demo', src, depend = [''], CPPPATH = inc)
+group = DefineGroup('hwsecurec-demo', src, depend = ['PKG_LITEOS_SDK_USING_DEMO'], CPPPATH = inc)
 
 Return('group')

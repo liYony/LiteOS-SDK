@@ -3,7 +3,7 @@ import os
 
 cwd = GetCurrentDir()
 src = Glob('src/*.c')
-inc = [cwd + "/include"]
+inc = [os.path.join(cwd, 'include')]
 
 group = DefineGroup('hwsecurec', src, depend = ['PKG_LITEOS_SDK_USING_HWSECUREC'], CPPPATH = inc)
 
