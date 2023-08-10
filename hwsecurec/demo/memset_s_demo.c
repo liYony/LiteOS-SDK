@@ -13,6 +13,8 @@ int memset_s_demo()
     rt_kprintf("str = \"%s\", error code = %d\n", str, r);
     r = memset_s(str, 5, 'c', 10);
     rt_kprintf("str = \"%s\", error code = %d\n", str, r);
+    
+    return 0;
 }
 
 INIT_APP_EXPORT(memset_s_demo);
