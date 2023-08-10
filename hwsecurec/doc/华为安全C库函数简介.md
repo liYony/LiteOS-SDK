@@ -23,6 +23,24 @@ errno_t memcpy_s(void *dest, size_t destMax, const void *src, size_t count)
 ## memmove_s
 ## wmemmove_s
 ## memset_s
+
+函数原型：
+
+```c
+errno_t memset_s(void *dest, size_t destMax, int c, size_t count)
+```
+
+参数：
+
+- dest：目标缓冲区地址
+- destMax：目标缓冲区最大容量（以字节为单位）
+- c：填充字节
+- count：要填充的字节数
+
+返回值：
+
+- 成功返回0，失败返回错误码
+
 ## strcpy_s
 ## wcscpy_s
 ## strncpy_s
