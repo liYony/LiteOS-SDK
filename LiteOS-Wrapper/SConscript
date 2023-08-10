@@ -1,0 +1,9 @@
+from building import *
+
+cwd = GetCurrentDir()
+src = Glob('kernel/base/*.c')
+inc = [cwd + '/kernel/include']
+
+group = DefineGroup('LiteOS_Wrapper', src, depend = ['PKG_LITEOS_SDK_USING_LITEOS_WRAPPER'], CPPPATH = inc)
+
+Return('group')
